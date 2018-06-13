@@ -2,14 +2,19 @@ package com.voice.service.domain.entity;
 
 import com.voice.service.instructure.Entity.RecordModifyEntity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "voiceResource")
 public class VoiceResource extends RecordModifyEntity {
     private String title;
     private int createUserId;
     private int ownerUserId;
     private int seriesId;
+    private long length;
+    private long size;
 
     public String getTitle() {
         return title;
@@ -59,6 +64,14 @@ public class VoiceResource extends RecordModifyEntity {
         this.size = size;
     }
 
-    private long length;
-    private long size;
+    public VoiceResource(){}
+
+    public VoiceResource(String title,int createUserId,int ownerUserId,int seriesId,long length,long size){
+        this.title = title;
+        this.createUserId = createUserId;
+        this.ownerUserId = ownerUserId;
+        this.seriesId = seriesId;
+        this.length = length;
+        this.size = size;
+    }
 }
