@@ -23,7 +23,7 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("沃艾斯接口在线文档")
-                .description("让声音绕云而行")
+                .description("") //让声音绕云而行
                 //.termsOfServiceUrl("zanwu")
                 .version("1.0")
                 .build();
