@@ -1,21 +1,32 @@
 package com.voice.service.controller;
 
 import com.voice.service.domain.dto.VoiceDto;
-import com.voice.service.domain.entity.VoiceResource;
 import com.voice.service.domain.service.voice.IVoiceService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author lufy
+ * @ClassName com.voice.service.controller.VoiceResourceController
+ * @Description 音频资源模块
+ */
 @RestController
 @RequestMapping("/voice")
 public class VoiceResourceController {
     @Autowired
     private IVoiceService voiceService;
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public boolean post(@ModelAttribute VoiceDto voiceDto){
-        return voiceService.add(voiceDto);
+
+    /**
+     * 添加新资源
+     * @author
+     * @param voiceDto
+     * @return
+     */
+    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @ApiOperation(value="获取用户详细信息",  httpMethod = "POST",notes="根据url的id来获取用户详细信息")
+    //@ApiImplicitParam(name = "VoiceDto", value = "资源", required = true, dataType = "VoiceDto", paramType ="VoiceDto")
+    public boolean post(@RequestBody VoiceDto voiceDto){
+        return voiceService.Add(voiceDto);
     }
 }

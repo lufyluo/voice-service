@@ -1,7 +1,14 @@
 package com.voice.service.domain.dto;
 
 import com.voice.service.domain.entity.VoiceResource;
+import io.swagger.annotations.ApiModel;
 
+/**
+ * @author lufy
+ * @ClassName com.voice.service.domain.dto.VoiceDto
+ * @Description
+ */
+@ApiModel(value = "资源对象",description="VoiceDto")
 public class VoiceDto {
     private String title;
     private int createUserId;

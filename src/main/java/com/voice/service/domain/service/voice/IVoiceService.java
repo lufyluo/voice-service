@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface IVoiceService {
     List<VoiceResource> LoadByKey(String key);
-    boolean add(VoiceDto voiceDto);
+    boolean Add(VoiceDto voiceDto);
 }

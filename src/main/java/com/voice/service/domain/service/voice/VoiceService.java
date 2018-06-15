@@ -17,7 +17,7 @@ public class VoiceService implements IVoiceService {
     }
 
     @Override
-    public boolean add(VoiceDto voiceDto) {
+    public boolean Add(VoiceDto voiceDto) {
         return resourceRepo.save(voiceDto.ToEntity())!=null;
     }
 }
