@@ -2,10 +2,12 @@ package com.voice.service.domain.service.voice;
 
 import com.voice.service.domain.dto.VoiceDto;
 import com.voice.service.domain.entity.VoiceResource;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface IVoiceService {
-    List<VoiceResource> LoadByKey(String key);
+
     boolean Add(VoiceDto voiceDto);
+
+    Page<VoiceResource> LoadByKey(String search, Pageable pageable);
 }

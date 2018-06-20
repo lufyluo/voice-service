@@ -6,9 +6,9 @@ import io.swagger.annotations.ApiModel;
 /**
  * @author lufy
  * @ClassName com.voice.service.domain.dto.VoiceDto
- * @Description
+ * @Description 资源对象
  */
-@ApiModel(value = "资源对象",description="VoiceDto")
+@ApiModel(value = "voiceDto",description="资源对象")
 public class VoiceDto {
     private String title;
     private int createUserId;

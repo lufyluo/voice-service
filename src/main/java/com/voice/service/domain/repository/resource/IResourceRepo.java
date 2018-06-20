@@ -10,4 +10,6 @@ import java.util.List;
 public interface IResourceRepo extends JpaRepository<VoiceResource, Long> {
     @Query("select vr from  VoiceResource vr where vr.id=:id")
     VoiceResource findAllByKey(int id);
+    @Query("select vr from  VoiceResource vr where vr.id=:id ")
+    VoiceResource findPagedAllByKey(int id,int pageIndex,int pageSize);
 }

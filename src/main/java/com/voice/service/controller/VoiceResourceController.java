@@ -1,10 +1,20 @@
 package com.voice.service.controller;
 
+import com.voice.service.domain.dto.SearchDto;
 import com.voice.service.domain.dto.VoiceDto;
+import com.voice.service.domain.entity.VoiceResource;
 import com.voice.service.domain.service.voice.IVoiceService;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author lufy
@@ -19,14 +29,20 @@ public class VoiceResourceController {
 
     /**
      * 添加新资源
-     * @author
+     *
      * @param voiceDto
      * @return
+     * @author
      */
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    @ApiOperation(value="获取用户详细信息",  httpMethod = "POST",notes="根据url的id来获取用户详细信息")
+    @ApiOperation(value = "添加资源", httpMethod = "POST", notes = "创建一条资源数据")
     //@ApiImplicitParam(name = "VoiceDto", value = "资源", required = true, dataType = "VoiceDto", paramType ="VoiceDto")
-    public boolean post(@RequestBody VoiceDto voiceDto){
+    public boolean post(@RequestBody VoiceDto voiceDto) {
         return voiceService.Add(voiceDto);
+    }
+
+    @RequestMapping(value = "/seek", method = RequestMethod.GET)
+    public Page<VoiceResource> seek(@RequestParam String search, @PageableDefault(page=0,size=10,sort = { "id" }, direction = Sort.Direction.DESC)Pageable pageable) {
+        return voiceService.LoadByKey(search,pageable);
     }
 }
