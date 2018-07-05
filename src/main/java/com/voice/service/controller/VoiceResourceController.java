@@ -1,10 +1,8 @@
 package com.voice.service.controller;
 
-import com.voice.service.domain.dto.SearchDto;
-import com.voice.service.domain.dto.VoiceDto;
+import com.voice.service.domain.dto.model.VoiceDto;
 import com.voice.service.domain.entity.VoiceResource;
 import com.voice.service.domain.service.voice.IVoiceService;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,9 +10,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author lufy

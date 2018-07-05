@@ -1,10 +1,8 @@
-package com.voice.service.domain.dto;
+package com.voice.service.domain.dto.model;
 
 import com.voice.service.instructure.Entity.User;
 import com.voice.service.instructure.Enum.Sex;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import java.util.Date;
 
 public class UserDto {

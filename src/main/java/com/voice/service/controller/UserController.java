@@ -1,6 +1,6 @@
 package com.voice.service.controller;
 
-import com.voice.service.domain.dto.UserDto;
+import com.voice.service.domain.dto.model.UserDto;
 import com.voice.service.domain.service.user.IUserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;

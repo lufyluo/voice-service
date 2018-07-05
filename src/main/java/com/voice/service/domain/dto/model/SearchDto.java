@@ -1,6 +1,4 @@
-package com.voice.service.domain.dto;
-
-import org.springframework.data.domain.Pageable;
+package com.voice.service.domain.dto.model;
 
 public class SearchDto{
     private String search;

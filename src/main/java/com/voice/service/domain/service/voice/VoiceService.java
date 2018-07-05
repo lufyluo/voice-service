@@ -1,6 +1,6 @@
 package com.voice.service.domain.service.voice;
 
-import com.voice.service.domain.dto.VoiceDto;
+import com.voice.service.domain.dto.model.VoiceDto;
 import com.voice.service.domain.entity.VoiceResource;
 import com.voice.service.domain.repository.resource.IResourceRepo;
 import org.springframework.beans.factory.annotation.Autowired;

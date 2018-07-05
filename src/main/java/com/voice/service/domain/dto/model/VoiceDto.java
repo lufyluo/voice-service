@@ -1,11 +1,11 @@
-package com.voice.service.domain.dto;
+package com.voice.service.domain.dto.model;
 
 import com.voice.service.domain.entity.VoiceResource;
 import io.swagger.annotations.ApiModel;
 
 /**
  * @author lufy
- * @ClassName com.voice.service.domain.dto.VoiceDto
+ * @ClassName com.voice.service.domain.dto.model.VoiceDto
  * @Description 资源对象
  */
 @ApiModel(value = "voiceDto",description="资源对象")

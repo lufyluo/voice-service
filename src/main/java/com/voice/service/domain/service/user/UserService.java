@@ -1,6 +1,6 @@
 package com.voice.service.domain.service.user;
 
-import com.voice.service.domain.dto.UserDto;
+import com.voice.service.domain.dto.model.UserDto;
 import com.voice.service.domain.repository.user.IUserRepo;
 import com.voice.service.instructure.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
